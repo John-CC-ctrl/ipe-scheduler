@@ -144,17 +144,11 @@ export async function sendToSlack(formData, timestamp) {
     ],
   };
 
-  const response = await fetch(webhookUrl, {
+  await fetch(webhookUrl, {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
+    mode: 'no-cors',
     body: JSON.stringify(payload),
   });
-
-  if (!response.ok) {
-    throw new Error(`Slack API error: ${response.status} ${response.statusText}`);
-  }
 
   return true;
 }

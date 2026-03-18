@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_SLACK_WEBHOOK_URL: ${{ secrets.VITE_SLACK_WEBHOOK_URL }}
+          VITE_SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
       - uses: actions/upload-pages-artifact@v3
         with:
