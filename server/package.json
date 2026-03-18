@@ -1,0 +1,16 @@
+{
+  "name": "ipe-scheduler-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Backend server for IPE Scheduler — handles Google Sheets API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "googleapis": "^140.0.1"
+  }
+}
